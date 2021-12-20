@@ -1,0 +1,10 @@
+@use './variables' as *;
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+@mixin font($fs: 18px, $lh: 20px, $c: white, $fw: 400) {
+  font-family: "Space Mono";
+  font-size: $fs;
+  line-height: $lh;
+  color: $c;
+  font-weight: $fw;
+}

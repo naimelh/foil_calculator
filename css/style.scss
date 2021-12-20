@@ -1,7 +1,214 @@
-@import "./base/reset";
-@import "./base/fonts";
-@import "./base/mixin";
-@import "./base/variables";
-@import "./base/icons/icons";
+@use './base/reset';
+@use './base/variables' as *;
+@use './base/fonts' as *;
+@use './base/mixin' as *;
+@use './icons/icons';
 
+body {
+  background-color: $light;
+}
 
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  img {
+    display: block;
+    margin: 148px auto 74px auto;
+  }
+}
+
+.form {
+  display: flex;
+  padding-top: 32px;
+  padding-right: 30px;
+  padding-left: 46px;
+  padding-bottom: 32px;
+  border-radius: 20px;
+  background-color: white;
+  gap: 44px;
+  font-size: 18px;
+
+  input:focus {
+    outline: none !important;
+    border-color: $green;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+  section {
+    width: 40%;
+  }
+  p {
+    margin-bottom: 10px;
+    @include font(13px, 0px, $dark, 500);
+  }
+
+  &__input {
+    border: 1px solid white;
+    background-color: $vl;
+    border-radius: 4px;
+    margin-bottom: 42px;
+    text-align: right;
+    min-height: 46px;
+    width: 100%;
+    padding: 13px 13px 9px 45px;
+
+    @include font(18px, 0px, $dark, 700);
+  }
+
+  #price:after {
+    position: absolute;
+    content: "\e901";
+    font-family: "icomoon";
+    top: 18%;
+    left: 6%;
+    width: 12px;
+    height: 17px;
+  }
+  #people:after {
+    position: absolute;
+    content: "\e902";
+    font-family: "icomoon";
+    top: 18%;
+    left: 6%;
+    width: 12px;
+    height: 17px;
+  }
+
+  div {
+    position: relative;
+  }
+
+  .list {
+    display: flex;
+    column-gap: 14px;
+    row-gap: 14px;
+    margin-bottom: 42px;
+    flex-wrap: wrap;
+    font-size: 19px;
+    width: 100%;
+
+    li {
+      button {
+        border: 1px solid white;
+        width: 117px;
+        height: 48px;
+        border-radius: 5px;
+        background-color: $dark;
+        @include font(18px, 0px, white, 700);
+        cursor: pointer;
+      }
+      input {
+        width: 117px;
+        height: 48px;
+        border: 1px solid white;
+        background-color: $vl;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include font(18px, 0px, $dark, 700);
+        border-radius: 5px;
+        text-align: center;
+        &:focus {
+          border-color: $green;
+        }
+      }
+      .select {
+        background-color: $green;
+        color: $dark;
+      }
+    }
+  }
+  aside {
+    width: 60%;
+    background-color: $dark;
+    padding: 60px 37px 34px 37px;
+    margin: 0 auto;
+    border-radius: 14px;
+    div.container {
+      width: 100%;
+      margin: 0 auto;
+      .amount {
+        margin-bottom: 56px;
+        p {
+          margin-bottom: 18px;
+        }
+        &::after {
+          position: absolute;
+          content: "$4.27";
+          top: 0;
+          right: 0;
+          @include font(23px, 0px, $green, 700);
+        }
+      }
+
+      .total {
+        position: relative;
+        margin-bottom: 130px;
+        p {
+          margin-bottom: 18px;
+        }
+        &::after {
+          position: absolute;
+          content: "$32.79";
+          top: 0;
+          right: 0;
+          @include font(23px, 0px, $green, 700);
+        }
+      }
+
+      button {
+        width: 100%;
+        height: 48px;
+        background-color: $green;
+        cursor: pointer;
+        border-radius: 4px;
+        @include font(16px, 0px, $dark, 700);
+      }
+
+      p {
+        @include font(14px, 0px, #fff, 700);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    img {
+      margin: 48px auto 38px auto;
+    }
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 0;
+
+    section {
+      width: 100%;
+    }
+
+    aside {
+      width: 100%;
+      padding-top: 42px;
+      padding-bottom: 23px;
+      margin: 0 auto;
+      div.container div.total {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

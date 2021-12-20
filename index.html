@@ -3,6 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fooi calculator</title>
+    <title>Foil calculator</title>
   </head>
-  
+  <link rel="stylesheet" href="./css/style.css" />
+  <body>
+    <header class="container">
+      <img src="./images/logo.svg" alt="Logo van de app" />
+    </header>
+    <main>
+      <form
+        action="test.php"
+        method="POST"
+        id="form"
+        class="form"
+        spellcheck="false"
+      >
+        <section>
+          <p>Bill</p>
+          <div id="price">
+            <input type="number" name="" id="price" class="form__input" />
+          </div>
+
+          <p>select Tip %</p>
+          <ul class="list" id="list">
+            <li class="list__item"><button type="button">5%</button></li>
+            <li class="list__item"><button type="button">10%</button></li>
+            <li class="list__item">
+              <button type="button" class="select">15%</button>
+            </li>
+            <li class="list__item"><button type="button">25%</button></li>
+            <li class="list__item"><button type="button">50%</button></li>
+            <li class="list__item list__item--custom">
+              <input
+                type="number"
+                class="list_item__custom"
+                placeholder="Custom"
+              />
+            </li>
+          </ul>
+          <p>Number of People</p>
+          <div id="people">
+            <input type="number" id="people" class="form__input" />
+          </div>
+        </section>
+        <aside>
+          <div class="container">
+            <div class="amount">
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div class="total">
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <button type="button">reset</button>
+          </div>
+        </aside>
+      </form>
+    </main>
+  </body>
+</html>

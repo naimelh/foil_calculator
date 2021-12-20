@@ -1,0 +1,406 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?zi0djd");
+  src: url("fonts/icomoon.eot?zi0djd#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?zi0djd") format("truetype"), url("fonts/icomoon.woff?zi0djd") format("woff"), url("fonts/icomoon.svg?zi0djd#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-percent:before {
+  content: "";
+}
+
+.icon-icon-dollar:before {
+  content: "";
+  color: #9ebbbd;
+}
+
+.icon-icon-person:before {
+  content: "";
+  color: #9ebbbd;
+}
+
+.icon-logo:before {
+  content: "";
+  color: #3d6666;
+}
+
+body {
+  background-color: #c5e4e7;
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+header img {
+  display: block;
+  margin: 148px auto 74px auto;
+}
+
+.form {
+  display: flex;
+  padding-top: 32px;
+  padding-right: 30px;
+  padding-left: 46px;
+  padding-bottom: 32px;
+  border-radius: 20px;
+  background-color: white;
+  gap: 44px;
+  font-size: 18px;
+  /* Firefox */
+}
+.form input:focus {
+  outline: none !important;
+  border-color: #26c0ab;
+}
+.form input::-webkit-outer-spin-button,
+.form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form input[type=number] {
+  -moz-appearance: textfield;
+}
+.form section {
+  width: 40%;
+}
+.form p {
+  margin-bottom: 10px;
+  font-family: "Space Mono";
+  font-size: 13px;
+  line-height: 0px;
+  color: #00494d;
+  font-weight: 500;
+}
+.form__input {
+  border: 1px solid white;
+  background-color: #f4fafa;
+  border-radius: 4px;
+  margin-bottom: 42px;
+  text-align: right;
+  min-height: 46px;
+  width: 100%;
+  padding: 13px 13px 9px 45px;
+  font-family: "Space Mono";
+  font-size: 18px;
+  line-height: 0px;
+  color: #00494d;
+  font-weight: 700;
+}
+.form #price:after {
+  position: absolute;
+  content: "";
+  font-family: "icomoon";
+  top: 18%;
+  left: 6%;
+  width: 12px;
+  height: 17px;
+}
+.form #people:after {
+  position: absolute;
+  content: "";
+  font-family: "icomoon";
+  top: 18%;
+  left: 6%;
+  width: 12px;
+  height: 17px;
+}
+.form div {
+  position: relative;
+}
+.form .list {
+  display: flex;
+  column-gap: 14px;
+  row-gap: 14px;
+  margin-bottom: 42px;
+  flex-wrap: wrap;
+  font-size: 19px;
+  width: 100%;
+}
+.form .list li button {
+  border: 1px solid white;
+  width: 117px;
+  height: 48px;
+  border-radius: 5px;
+  background-color: #00494d;
+  font-family: "Space Mono";
+  font-size: 18px;
+  line-height: 0px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+.form .list li input {
+  width: 117px;
+  height: 48px;
+  border: 1px solid white;
+  background-color: #f4fafa;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Space Mono";
+  font-size: 18px;
+  line-height: 0px;
+  color: #00494d;
+  font-weight: 700;
+  border-radius: 5px;
+  text-align: center;
+}
+.form .list li input:focus {
+  border-color: #26c0ab;
+}
+.form .list li .select {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+.form aside {
+  width: 60%;
+  background-color: #00494d;
+  padding: 60px 37px 34px 37px;
+  margin: 0 auto;
+  border-radius: 14px;
+}
+.form aside div.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.form aside div.container .amount {
+  margin-bottom: 56px;
+}
+.form aside div.container .amount p {
+  margin-bottom: 18px;
+}
+.form aside div.container .amount::after {
+  position: absolute;
+  content: "$4.27";
+  top: 0;
+  right: 0;
+  font-family: "Space Mono";
+  font-size: 23px;
+  line-height: 0px;
+  color: #26c0ab;
+  font-weight: 700;
+}
+.form aside div.container .total {
+  position: relative;
+  margin-bottom: 130px;
+}
+.form aside div.container .total p {
+  margin-bottom: 18px;
+}
+.form aside div.container .total::after {
+  position: absolute;
+  content: "$32.79";
+  top: 0;
+  right: 0;
+  font-family: "Space Mono";
+  font-size: 23px;
+  line-height: 0px;
+  color: #26c0ab;
+  font-weight: 700;
+}
+.form aside div.container button {
+  width: 100%;
+  height: 48px;
+  background-color: #26c0ab;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Space Mono";
+  font-size: 16px;
+  line-height: 0px;
+  color: #00494d;
+  font-weight: 700;
+}
+.form aside div.container p {
+  font-family: "Space Mono";
+  font-size: 14px;
+  line-height: 0px;
+  color: #fff;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 900px) {
+  header img {
+    margin: 48px auto 38px auto;
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 0;
+  }
+  .form section {
+    width: 100%;
+  }
+  .form aside {
+    width: 100%;
+    padding-top: 42px;
+    padding-bottom: 23px;
+    margin: 0 auto;
+  }
+  .form aside div.container div.total {
+    margin-bottom: 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
